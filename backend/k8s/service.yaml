@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: backend #Sets service name
+  labels:
+    app: backend #Lables and selectors
+spec:
+  type: ClusterIP #Sets Service type
+  ports:
+    - port: 8000 # Sets port to run the backend application
+  selector:
+    app: backend      
